@@ -65,7 +65,7 @@ The structure of this repository is as follows:
     │  │  ├── efds_poc                     # Pipeline & Nodes Scripts
     │  ├── wandb/                          # Wandb Runs Files                           
     │  ├── pyproject.toml
-    │  ├── images/
+    ├── images/
     ├── data_sampling.py                   # data sampling script         
     └── README.md
 
