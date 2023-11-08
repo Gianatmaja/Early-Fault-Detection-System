@@ -10,7 +10,7 @@ With unplanned downtime being a leading contributor of high costs for them, it m
 An early fault detection system to identify faulty transient state (the state between normal and permament faulty) in oil wells is recommended. By identifying faulty transient states, maintenance can be done quickly and as needed, thus reducing unplanned downtime and the costs associated with it.
 
 ## Business Impact
-The value driver tree below illustrate the business impact of the proposed early fault detection system.
+The value driver tree below illustrate the business impact of the proposed early fault detection system. On the left, the business impact - cost reduction - is defined. Moving to the right of the tree are the drivers. This provides an illustration of how reductions in costs can be achieved through reduction of unplanned downtime and identification of transient faulty states, further driven by the performance of ML models, as well as reporting and response time following the detection of faulty transient states.
 
 ## Proof-of-Concept (PoC)
 This GitHub repository serves as the PoC and will demonstrate the feasibility of the proposed early fault detection system.
@@ -50,3 +50,5 @@ The highlighted tools and libraries used to develop this PoC are:
 ### Project Structure
 
 ### Visualizing the Workflow
+
+## References
