@@ -48,7 +48,40 @@ The highlighted tools and libraries used to develop this PoC are:
 - [Explainer-Dashboard](https://explainerdashboard.readthedocs.io/en/latest/): Used for model explainabillity.
 
 ### Project Structure
+The structure of this repository is as follows:
+
+    .
+    ├── efds-poc/                          # Main code
+    │  ├── conf/                           # Configurations                              
+    │  ├── data/                           # Data & Model Files
+    │  ├── docs/
+    │  ├── notebooks/
+    │  ├── src/                            # Main pipeline codes   
+    │  │  ├── requirements.txt
+    │  │  ├── efds_poc                     # Pipeline & Nodes Scripts
+    │  ├── wandb/                          # Wandb Runs Files                           
+    │  ├── pyproject.toml
+    │  ├── images/
+    ├── data_sampling.py                   # data sampling script         
+    └── README.md
+
+The main codes for the project are in `src` directory inside the `efds-poc` folder. There are 4 pipelines that make up the project, namely:
+- data_preprocessing
+- model_experimentation
+- model_saving
+- model_inference
 
 ### Visualizing the Workflow
+The pipeline can also be visualized using the `Kedro-Viz` library, by running to following command:
+
+```bash
+kedro viz
+```
+
+The result can be seen below.
 
 ## References
+[1] Casey, J. (2020, November 30). The Oil and Gas Energy Transition: Is Cutting Costs Enough? Offshore Technology. https://www.offshore-technology.com/features/the-oil-and-gas-energy-transition-is-cutting-costs-enough/
+[2] The Real Cost of Downtime in Process Manufacturing (2022, January 5). Precognize, A Samson Company. https://www.precog.co/blog/downtime-cost-process-manufacturing/
+[3] Vargas, Ricardo; Munaro, Celso; Ciarelli, Patrick; Medeiros, André; Amaral, Bruno; Barrionuevo, Daniel; Araújo, Jean; Ribeiro, Jorge; Magalhães, Lucas (2019), “Data for: A Realistic and Public Dataset with Rare Undesirable Real Events in Oil Wells”, Mendeley Data, v1. http://dx.doi.org/10.17632/r7774rwc7v.1
+![image](https://github.com/Gianatmaja/Early-Fault-Detection-System/assets/65583121/0b72a66a-6b5f-429c-9cd2-db735251ea62)
