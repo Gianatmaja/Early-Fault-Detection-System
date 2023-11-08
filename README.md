@@ -16,6 +16,19 @@ The value driver tree below illustrate the business impact of the proposed early
 This GitHub repository serves as the PoC and will demonstrate the feasibility of the proposed early fault detection system.
 
 ### Running the PoC
+The main codes for the PoC follows the Kedro project structure. To execute the entire project, go to the efds-poc directory and run the following command.
+
+  kedro run
+
+To run a specific pipeline, run the following command.
+
+  kedro run --pipeline=<replace with pipeline name>
+
+To run a specific node, run the following command.
+
+  kedro run --node=<replace with node name>
+
+For more information on the Kedro project structure, refer to the [Kedro documentation](https://docs.kedro.org/en/stable/).
 
 ### Dataset
 The dataset used for the PoC is a sample obtained from the [3W Dataset GitHub Repository](https://github.com/ricardovvargas/3w_dataset). The sampling is performed using the `data_sampling.py` script.
@@ -28,3 +41,6 @@ The highlighted tools and libraries used to develop this PoC are:
 - [Weights & Biases](https://docs.wandb.ai/): Used for experiment tracking and ML model management.
 - [Explainer-Dashboard](https://explainerdashboard.readthedocs.io/en/latest/): Used for model explainabillity.
 
+### Project Structure
+
+### Visualizing the Workflow
