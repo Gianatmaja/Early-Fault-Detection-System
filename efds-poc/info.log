@@ -1,0 +1,882 @@
+2023-11-06 20:05:35,734 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 20:05:38,811 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/kedro/framework/project/__init__.py:366: UserWarning: An error occurred while importing the 'efds_poc.pipelines.data_preprocessing' module. Nothing defined therein will be returned by 'find_pipelines'.
+
+Traceback (most recent call last):
+  File "/Users/gianatmaja/anaconda3/lib/python3.11/site-packages/kedro/framework/project/__init__.py", line 364, in find_pipelines
+    pipeline_module = importlib.import_module(pipeline_module_name)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/gianatmaja/anaconda3/lib/python3.11/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/gianatmaja/Downloads/3w_dataset-master/efds-poc/src/efds_poc/pipelines/data_preprocessing/__init__.py", line 6, in <module>
+    from .pipeline import create_pipeline
+  File "/Users/gianatmaja/Downloads/3w_dataset-master/efds-poc/src/efds_poc/pipelines/data_preprocessing/pipeline.py", line 7, in <module>
+    from .nodes import read_raw, preproc_data, save_clean_data
+ImportError: cannot import name 'save_clean_data' from 'efds_poc.pipelines.data_preprocessing.nodes' (/Users/gianatmaja/Downloads/3w_dataset-master/efds-poc/src/efds_poc/pipelines/data_preprocessing/nodes.py)
+
+  warnings.warn(
+
+2023-11-06 20:08:24,151 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 20:10:12,145 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 20:10:15,491 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-06 20:10:15,586 - kedro.pipeline.node - INFO - Running node: preprocess_data_node: preproc_data([events]) -> [events_preprocessed]
+2023-11-06 20:10:15,587 - kedro.pipeline.node - ERROR - Node 'preprocess_data_node: preproc_data([events]) -> [events_preprocessed]' failed with error: 
+Given configuration path either does not exist or is not a valid directory: conf/base/base
+2023-11-06 20:10:15,591 - kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+2023-11-06 20:11:08,221 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 20:11:08,620 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-06 20:11:08,691 - kedro.pipeline.node - INFO - Running node: preprocess_data_node: preproc_data([events]) -> [events_preprocessed]
+2023-11-06 20:11:08,721 - kedro.io.data_catalog - INFO - Saving data to 'events_preprocessed' (CSVDataSet)...
+2023-11-06 20:11:09,054 - kedro.runner.sequential_runner - INFO - Completed 1 out of 1 tasks
+2023-11-06 20:11:09,054 - kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+2023-11-06 20:18:52,616 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 20:19:36,288 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 20:19:36,571 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-06 20:19:36,643 - kedro.pipeline.node - INFO - Running node: preprocess_data_node: preproc_data([events]) -> [events_preprocessed]
+2023-11-06 20:19:36,673 - kedro.io.data_catalog - INFO - Saving data to 'events_preprocessed' (CSVDataSet)...
+2023-11-06 20:19:37,009 - kedro.runner.sequential_runner - INFO - Completed 1 out of 1 tasks
+2023-11-06 20:19:37,010 - kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+2023-11-06 20:52:06,982 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 20:52:44,684 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 20:53:03,541 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 20:53:04,800 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-06 20:53:04,872 - kedro.pipeline.node - INFO - Running node: auto_eda_node: auto_eda([events]) -> None
+2023-11-06 20:54:22,520 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 20:54:23,604 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-06 20:54:23,673 - kedro.pipeline.node - INFO - Running node: auto_eda_node: auto_eda([events]) -> None
+2023-11-06 20:56:05,551 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 20:56:06,627 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-06 20:56:06,696 - kedro.pipeline.node - INFO - Running node: auto_eda_node: auto_eda([events]) -> None
+2023-11-06 20:56:28,372 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 20:56:29,471 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-06 20:56:29,541 - kedro.pipeline.node - INFO - Running node: auto_eda_node: auto_eda([events]) -> None
+2023-11-06 20:57:29,440 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 20:57:30,551 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-06 20:57:30,621 - kedro.pipeline.node - INFO - Running node: auto_eda_node: auto_eda([events]) -> None
+2023-11-06 20:59:07,035 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 20:59:08,344 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-06 20:59:08,420 - kedro.pipeline.node - INFO - Running node: auto_eda_node: auto_eda([events]) -> None
+2023-11-06 21:00:18,503 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 21:00:19,791 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-06 21:00:19,864 - kedro.pipeline.node - INFO - Running node: auto_eda_node: auto_eda([events]) -> None
+2023-11-06 21:00:51,623 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 21:00:52,709 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-06 21:00:52,779 - kedro.pipeline.node - INFO - Running node: auto_eda_node: auto_eda([events]) -> None
+2023-11-06 21:02:43,003 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 21:02:58,799 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 21:02:59,940 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-06 21:03:00,011 - kedro.pipeline.node - INFO - Running node: auto_eda_node: auto_eda([events]) -> None
+2023-11-06 21:05:21,850 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 21:05:23,476 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-06 21:05:23,549 - kedro.pipeline.node - INFO - Running node: auto_eda_node: auto_eda([events]) -> None
+2023-11-06 21:07:34,149 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 21:07:35,496 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-06 21:07:35,571 - kedro.pipeline.node - INFO - Running node: auto_eda_node: auto_eda([events]) -> None
+2023-11-06 21:07:35,572 - kedro.pipeline.node - ERROR - Node 'auto_eda_node: auto_eda([events]) -> None' failed with error: 
+strptime() argument 1 must be str, not datetime.datetime
+2023-11-06 21:07:35,576 - kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+2023-11-06 21:07:55,226 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 21:07:56,344 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-06 21:07:56,416 - kedro.pipeline.node - INFO - Running node: auto_eda_node: auto_eda([events]) -> None
+2023-11-06 21:07:56,417 - kedro.pipeline.node - ERROR - Node 'auto_eda_node: auto_eda([events]) -> None' failed with error: 
+time data '2023-11-06 21:07:56.417592' does not match format '%d.%m.%Y %H:%M:%S'
+2023-11-06 21:07:56,421 - kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+2023-11-06 21:09:33,589 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 21:09:34,879 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-06 21:09:34,954 - kedro.pipeline.node - INFO - Running node: auto_eda_node: auto_eda([events]) -> None
+2023-11-06 21:09:34,954 - kedro.pipeline.node - ERROR - Node 'auto_eda_node: auto_eda([events]) -> None' failed with error: 
+name 'ts' is not defined
+2023-11-06 21:09:34,958 - kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+2023-11-06 21:09:55,992 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 21:09:57,090 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-06 21:09:57,160 - kedro.pipeline.node - INFO - Running node: auto_eda_node: auto_eda([events]) -> None
+2023-11-06 21:10:45,445 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 21:10:46,554 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-06 21:10:46,624 - kedro.pipeline.node - INFO - Running node: auto_eda_node: auto_eda([events]) -> None
+2023-11-06 21:11:11,700 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 21:11:12,784 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-06 21:11:12,856 - kedro.pipeline.node - INFO - Running node: auto_eda_node: auto_eda([events]) -> None
+2023-11-06 21:12:16,935 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 21:12:18,068 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-06 21:12:18,142 - kedro.pipeline.node - INFO - Running node: auto_eda_node: auto_eda([events]) -> None
+2023-11-06 21:13:47,043 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 21:13:48,159 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-06 21:13:48,228 - kedro.pipeline.node - INFO - Running node: auto_eda_node: auto_eda([events]) -> None
+2023-11-06 21:37:49,106 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 21:38:41,083 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 21:39:09,079 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 21:39:10,468 - kedro.io.data_catalog - INFO - Loading data from 'events_preprocessed' (CSVDataSet)...
+2023-11-06 21:39:10,536 - kedro.pipeline.node - INFO - Running node: split_data_node: split_data([events_preprocessed]) -> [train_data,test_data]
+2023-11-06 21:39:10,546 - kedro.pipeline.node - ERROR - Node 'split_data_node: split_data([events_preprocessed]) -> [train_data,test_data]' failed with error: 
+name 'pd' is not defined
+2023-11-06 21:39:10,550 - kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+2023-11-06 21:39:27,231 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 21:39:28,594 - kedro.io.data_catalog - INFO - Loading data from 'events_preprocessed' (CSVDataSet)...
+2023-11-06 21:39:28,660 - kedro.pipeline.node - INFO - Running node: split_data_node: split_data([events_preprocessed]) -> [train_data,test_data]
+2023-11-06 21:39:28,681 - kedro.io.data_catalog - INFO - Saving data to 'train_data' (CSVDataSet)...
+2023-11-06 21:39:29,024 - kedro.io.data_catalog - INFO - Saving data to 'test_data' (CSVDataSet)...
+2023-11-06 21:39:29,109 - kedro.runner.sequential_runner - INFO - Completed 1 out of 3 tasks
+2023-11-06 21:39:29,110 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-06 21:39:29,150 - kedro.io.data_catalog - INFO - Loading data from 'test_data' (CSVDataSet)...
+2023-11-06 21:39:29,165 - kedro.pipeline.node - INFO - Running node: train_rf_node: train_rf_models([train_data,test_data]) -> None
+2023-11-06 21:39:30,321 - kedro.pipeline.node - ERROR - Node 'train_rf_node: train_rf_models([train_data,test_data]) -> None' failed with error: 
+name 'ParameterGrid' is not defined
+2023-11-06 21:39:30,335 - kedro.runner.sequential_runner - WARNING - There are 2 nodes that have not run.
+You can resume the pipeline run from the nearest nodes with persisted inputs by adding the following argument to your previous command:
+  --from-nodes "train_rf_node,train_xgb_node"
+2023-11-06 21:40:13,242 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 21:40:14,617 - kedro.io.data_catalog - INFO - Loading data from 'events_preprocessed' (CSVDataSet)...
+2023-11-06 21:40:14,681 - kedro.pipeline.node - INFO - Running node: split_data_node: split_data([events_preprocessed]) -> [train_data,test_data]
+2023-11-06 21:40:14,701 - kedro.io.data_catalog - INFO - Saving data to 'train_data' (CSVDataSet)...
+2023-11-06 21:40:15,044 - kedro.io.data_catalog - INFO - Saving data to 'test_data' (CSVDataSet)...
+2023-11-06 21:40:15,130 - kedro.runner.sequential_runner - INFO - Completed 1 out of 3 tasks
+2023-11-06 21:40:15,130 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-06 21:40:15,171 - kedro.io.data_catalog - INFO - Loading data from 'test_data' (CSVDataSet)...
+2023-11-06 21:40:15,186 - kedro.pipeline.node - INFO - Running node: train_rf_node: train_rf_models([train_data,test_data]) -> None
+2023-11-06 21:40:27,068 - kedro.pipeline.node - ERROR - Node 'train_rf_node: train_rf_models([train_data,test_data]) -> None' failed with error: 
+Input y contains NaN.
+2023-11-06 21:40:27,088 - kedro.runner.sequential_runner - WARNING - There are 2 nodes that have not run.
+You can resume the pipeline run from the nearest nodes with persisted inputs by adding the following argument to your previous command:
+  --from-nodes "train_rf_node,train_xgb_node"
+2023-11-06 21:44:13,197 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 21:44:14,841 - kedro.io.data_catalog - INFO - Loading data from 'events_preprocessed' (CSVDataSet)...
+2023-11-06 21:44:14,909 - kedro.pipeline.node - INFO - Running node: split_data_node: split_data([events_preprocessed]) -> [train_data,test_data]
+2023-11-06 21:44:14,930 - kedro.io.data_catalog - INFO - Saving data to 'train_data' (CSVDataSet)...
+2023-11-06 21:44:15,275 - kedro.io.data_catalog - INFO - Saving data to 'test_data' (CSVDataSet)...
+2023-11-06 21:44:15,361 - kedro.runner.sequential_runner - INFO - Completed 1 out of 3 tasks
+2023-11-06 21:44:15,361 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-06 21:44:15,402 - kedro.io.data_catalog - INFO - Loading data from 'test_data' (CSVDataSet)...
+2023-11-06 21:44:15,418 - kedro.pipeline.node - INFO - Running node: train_rf_node: train_rf_models([train_data,test_data]) -> None
+2023-11-06 21:44:26,326 - kedro.pipeline.node - ERROR - Node 'train_rf_node: train_rf_models([train_data,test_data]) -> None' failed with error: 
+Input y contains NaN.
+2023-11-06 21:44:26,349 - kedro.runner.sequential_runner - WARNING - There are 2 nodes that have not run.
+You can resume the pipeline run from the nearest nodes with persisted inputs by adding the following argument to your previous command:
+  --from-nodes "train_xgb_node,train_rf_node"
+2023-11-06 21:49:42,045 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 21:49:44,057 - kedro.io.data_catalog - INFO - Loading data from 'events_preprocessed' (CSVDataSet)...
+2023-11-06 21:49:44,124 - kedro.pipeline.node - INFO - Running node: split_data_node: split_data([events_preprocessed]) -> [train_data,test_data]
+2023-11-06 21:49:44,141 - kedro.io.data_catalog - INFO - Saving data to 'train_data' (CSVDataSet)...
+2023-11-06 21:49:44,470 - kedro.io.data_catalog - INFO - Saving data to 'test_data' (CSVDataSet)...
+2023-11-06 21:49:44,554 - kedro.runner.sequential_runner - INFO - Completed 1 out of 3 tasks
+2023-11-06 21:49:44,555 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-06 21:49:44,594 - kedro.io.data_catalog - INFO - Loading data from 'test_data' (CSVDataSet)...
+2023-11-06 21:49:44,610 - kedro.pipeline.node - INFO - Running node: train_rf_node: train_rf_models([train_data,test_data]) -> None
+2023-11-06 21:49:52,310 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:49:52,319 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:49:52,324 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:50:07,106 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:50:07,117 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:50:07,123 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:50:24,975 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:50:24,986 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:50:24,992 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:50:38,563 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:50:38,574 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:50:38,579 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:50:55,355 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:50:55,366 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:50:55,372 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:51:15,008 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:51:15,019 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:51:15,025 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:51:29,133 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:51:29,145 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:51:29,151 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:51:46,203 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:51:46,216 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:51:46,223 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:52:07,730 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:52:07,741 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:52:07,747 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:52:13,584 - kedro.runner.sequential_runner - INFO - Completed 2 out of 3 tasks
+2023-11-06 21:52:13,585 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-06 21:52:13,642 - kedro.io.data_catalog - INFO - Loading data from 'test_data' (CSVDataSet)...
+2023-11-06 21:52:13,659 - kedro.pipeline.node - INFO - Running node: train_xgb_node: train_xgb_models([train_data,test_data]) -> None
+2023-11-06 21:52:23,881 - kedro.pipeline.node - ERROR - Node 'train_xgb_node: train_xgb_models([train_data,test_data]) -> None' failed with error: 
+name 'y_train' is not defined
+2023-11-06 21:52:23,899 - kedro.runner.sequential_runner - WARNING - There are 1 nodes that have not run.
+You can resume the pipeline run from the nearest nodes with persisted inputs by adding the following argument to your previous command:
+  --from-nodes "train_xgb_node"
+2023-11-06 21:54:06,775 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 21:54:08,131 - kedro.io.data_catalog - INFO - Loading data from 'events_preprocessed' (CSVDataSet)...
+2023-11-06 21:54:08,198 - kedro.pipeline.node - INFO - Running node: split_data_node: split_data([events_preprocessed]) -> [train_data,test_data]
+2023-11-06 21:54:08,215 - kedro.io.data_catalog - INFO - Saving data to 'train_data' (CSVDataSet)...
+2023-11-06 21:54:08,546 - kedro.io.data_catalog - INFO - Saving data to 'test_data' (CSVDataSet)...
+2023-11-06 21:54:08,629 - kedro.runner.sequential_runner - INFO - Completed 1 out of 3 tasks
+2023-11-06 21:54:08,630 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-06 21:54:08,669 - kedro.io.data_catalog - INFO - Loading data from 'test_data' (CSVDataSet)...
+2023-11-06 21:54:08,684 - kedro.pipeline.node - INFO - Running node: train_rf_node: train_rf_models([train_data,test_data]) -> None
+2023-11-06 21:54:17,323 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:54:17,334 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:54:17,340 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:54:32,018 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:54:32,029 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:54:32,036 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:54:49,894 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:54:49,905 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:54:49,911 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:55:03,332 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:55:03,343 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:55:03,349 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:55:20,360 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:55:20,372 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:55:20,377 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:55:40,015 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:55:40,026 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:55:40,032 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:55:54,186 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:55:54,197 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:55:54,203 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:56:13,479 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:56:13,490 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:56:13,496 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:56:34,522 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:56:34,533 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:56:34,539 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:56:40,544 - kedro.runner.sequential_runner - INFO - Completed 2 out of 3 tasks
+2023-11-06 21:56:40,545 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-06 21:56:40,604 - kedro.io.data_catalog - INFO - Loading data from 'test_data' (CSVDataSet)...
+2023-11-06 21:56:40,621 - kedro.pipeline.node - INFO - Running node: train_xgb_node: train_xgb_models([train_data,test_data]) -> None
+2023-11-06 21:56:51,885 - kedro.pipeline.node - ERROR - Node 'train_xgb_node: train_xgb_models([train_data,test_data]) -> None' failed with error: 
+name 'rf' is not defined
+2023-11-06 21:56:51,904 - kedro.runner.sequential_runner - WARNING - There are 1 nodes that have not run.
+You can resume the pipeline run from the nearest nodes with persisted inputs by adding the following argument to your previous command:
+  --from-nodes "train_xgb_node"
+2023-11-06 21:58:48,664 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 21:58:50,026 - kedro.io.data_catalog - INFO - Loading data from 'events_preprocessed' (CSVDataSet)...
+2023-11-06 21:58:50,092 - kedro.pipeline.node - INFO - Running node: split_data_node: split_data([events_preprocessed]) -> [train_data,test_data]
+2023-11-06 21:58:50,109 - kedro.io.data_catalog - INFO - Saving data to 'train_data' (CSVDataSet)...
+2023-11-06 21:58:50,438 - kedro.io.data_catalog - INFO - Saving data to 'test_data' (CSVDataSet)...
+2023-11-06 21:58:50,523 - kedro.runner.sequential_runner - INFO - Completed 1 out of 3 tasks
+2023-11-06 21:58:50,523 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-06 21:58:50,563 - kedro.io.data_catalog - INFO - Loading data from 'test_data' (CSVDataSet)...
+2023-11-06 21:58:50,578 - kedro.pipeline.node - INFO - Running node: train_rf_node: train_rf_models([train_data,test_data]) -> None
+2023-11-06 21:58:58,153 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:58:58,164 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:58:58,170 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:59:14,014 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:59:14,025 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:59:14,031 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:59:31,751 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:59:31,762 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:59:31,768 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:59:45,258 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:59:45,269 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 21:59:45,274 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 22:00:02,204 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 22:00:02,214 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 22:00:02,220 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 22:00:24,202 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 22:00:24,215 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 22:00:24,220 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 22:00:39,828 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 22:00:39,839 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 22:00:39,845 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 22:00:59,182 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 22:00:59,195 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 22:00:59,202 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 22:01:30,937 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 22:01:30,950 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 22:01:30,956 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/sklearn/metrics/_classification.py:1469: UndefinedMetricWarning:
+
+Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+
+
+2023-11-06 22:01:36,797 - kedro.runner.sequential_runner - INFO - Completed 2 out of 3 tasks
+2023-11-06 22:01:36,799 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-06 22:01:36,859 - kedro.io.data_catalog - INFO - Loading data from 'test_data' (CSVDataSet)...
+2023-11-06 22:01:36,876 - kedro.pipeline.node - INFO - Running node: train_xgb_node: train_xgb_models([train_data,test_data]) -> None
+2023-11-06 22:03:17,892 - kedro.runner.sequential_runner - INFO - Completed 3 out of 3 tasks
+2023-11-06 22:03:17,895 - kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+2023-11-06 23:34:43,333 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 23:37:10,036 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-06 23:37:11,674 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-06 23:37:11,722 - kedro.pipeline.node - INFO - Running node: save_scaler_node: save_scaler([train_data]) -> [scaler]
+2023-11-06 23:37:11,727 - kedro.io.data_catalog - INFO - Saving data to 'scaler' (PickleDataSet)...
+2023-11-06 23:37:11,728 - kedro.runner.sequential_runner - INFO - Completed 1 out of 2 tasks
+2023-11-06 23:37:11,728 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-06 23:37:11,768 - kedro.io.data_catalog - INFO - Loading data from 'scaler' (PickleDataSet)...
+2023-11-06 23:37:11,770 - kedro.pipeline.node - INFO - Running node: save_model_node: save_model([train_data,scaler]) -> [best_model]
+2023-11-06 23:37:15,543 - kedro.io.data_catalog - INFO - Saving data to 'best_model' (PickleDataSet)...
+2023-11-06 23:37:15,553 - kedro.runner.sequential_runner - INFO - Completed 2 out of 2 tasks
+2023-11-06 23:37:15,554 - kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+2023-11-07 00:20:42,711 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 00:20:44,709 - kedro.io.data_catalog - INFO - Loading data from 'extra_data1' (CSVDataSet)...
+2023-11-07 00:20:44,732 - kedro.io.data_catalog - INFO - Loading data from 'events_preprocessed' (CSVDataSet)...
+2023-11-07 00:20:44,794 - kedro.io.data_catalog - INFO - Loading data from 'best_model' (PickleDataSet)...
+2023-11-07 00:20:44,810 - kedro.io.data_catalog - INFO - Loading data from 'scaler' (PickleDataSet)...
+2023-11-07 00:20:44,818 - kedro.pipeline.node - INFO - Running node: predict_new_node: predict_new_data([extra_data1,events_preprocessed,best_model,scaler]) -> [new_preds]
+2023-11-07 00:20:44,915 - kedro.io.data_catalog - INFO - Saving data to 'new_preds' (MemoryDataset)...
+2023-11-07 00:20:44,920 - kedro.runner.sequential_runner - INFO - Completed 1 out of 1 tasks
+2023-11-07 00:20:44,920 - kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+2023-11-07 00:20:44,921 - kedro.io.data_catalog - INFO - Loading data from 'new_preds' (MemoryDataset)...
+2023-11-07 00:21:31,417 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 00:21:32,807 - kedro.io.data_catalog - INFO - Loading data from 'extra_data1' (CSVDataSet)...
+2023-11-07 00:21:32,828 - kedro.io.data_catalog - INFO - Loading data from 'events_preprocessed' (CSVDataSet)...
+2023-11-07 00:21:32,887 - kedro.io.data_catalog - INFO - Loading data from 'best_model' (PickleDataSet)...
+2023-11-07 00:21:32,900 - kedro.io.data_catalog - INFO - Loading data from 'scaler' (PickleDataSet)...
+2023-11-07 00:21:32,908 - kedro.pipeline.node - INFO - Running node: predict_new_node: predict_new_data([extra_data1,events_preprocessed,best_model,scaler]) -> [new_predictions]
+2023-11-07 00:21:33,003 - kedro.io.data_catalog - INFO - Saving data to 'new_predictions' (CSVDataSet)...
+2023-11-07 00:21:33,100 - kedro.runner.sequential_runner - INFO - Completed 1 out of 1 tasks
+2023-11-07 00:21:33,101 - kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+2023-11-07 00:24:04,408 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 00:24:05,780 - kedro.io.data_catalog - INFO - Loading data from 'extra_data1' (CSVDataSet)...
+2023-11-07 00:24:05,802 - kedro.io.data_catalog - INFO - Loading data from 'events_preprocessed' (CSVDataSet)...
+2023-11-07 00:24:05,862 - kedro.io.data_catalog - INFO - Loading data from 'best_model' (PickleDataSet)...
+2023-11-07 00:24:05,876 - kedro.io.data_catalog - INFO - Loading data from 'scaler' (PickleDataSet)...
+2023-11-07 00:24:05,883 - kedro.pipeline.node - INFO - Running node: predict_new_node: predict_new_data([extra_data1,events_preprocessed,best_model,scaler]) -> [new_predictions]
+2023-11-07 00:24:05,980 - kedro.io.data_catalog - INFO - Saving data to 'new_predictions' (CSVDataSet)...
+2023-11-07 00:24:06,075 - kedro.runner.sequential_runner - INFO - Completed 1 out of 1 tasks
+2023-11-07 00:24:06,076 - kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+2023-11-07 00:25:24,619 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 00:25:25,987 - kedro.io.data_catalog - INFO - Loading data from 'extra_data1' (CSVDataSet)...
+2023-11-07 00:25:26,008 - kedro.io.data_catalog - INFO - Loading data from 'events_preprocessed' (CSVDataSet)...
+2023-11-07 00:25:26,069 - kedro.io.data_catalog - INFO - Loading data from 'best_model' (PickleDataSet)...
+2023-11-07 00:25:26,083 - kedro.io.data_catalog - INFO - Loading data from 'scaler' (PickleDataSet)...
+2023-11-07 00:25:26,091 - kedro.pipeline.node - INFO - Running node: predict_new_node: predict_new_data([extra_data1,events_preprocessed,best_model,scaler]) -> [new_predictions]
+2023-11-07 00:25:26,193 - kedro.io.data_catalog - INFO - Saving data to 'new_predictions' (CSVDataSet)...
+2023-11-07 00:25:26,289 - kedro.runner.sequential_runner - INFO - Completed 1 out of 1 tasks
+2023-11-07 00:25:26,290 - kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+2023-11-07 00:31:06,075 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 00:31:07,440 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-07 00:31:07,483 - kedro.io.data_catalog - INFO - Loading data from 'scaler' (PickleDataSet)...
+2023-11-07 00:31:07,486 - kedro.pipeline.node - INFO - Running node: save_model_node: save_model([train_data,scaler]) -> None
+2023-11-07 00:31:11,522 - kedro.runner.sequential_runner - INFO - Completed 1 out of 2 tasks
+2023-11-07 00:31:11,523 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-07 00:31:11,567 - kedro.pipeline.node - INFO - Running node: save_scaler_node: save_scaler([train_data]) -> None
+2023-11-07 00:31:11,571 - kedro.runner.sequential_runner - INFO - Completed 2 out of 2 tasks
+2023-11-07 00:31:11,572 - kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+2023-11-07 00:33:42,184 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 00:33:43,800 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-07 00:33:43,841 - kedro.io.data_catalog - INFO - Loading data from 'scaler' (PickleDataSet)...
+2023-11-07 00:33:43,844 - kedro.pipeline.node - INFO - Running node: save_model_node: save_model([train_data,scaler]) -> None
+2023-11-07 00:33:47,421 - kedro.runner.sequential_runner - INFO - Completed 1 out of 2 tasks
+2023-11-07 00:33:47,422 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-07 00:33:47,466 - kedro.pipeline.node - INFO - Running node: save_scaler_node: save_scaler([train_data]) -> None
+2023-11-07 00:33:47,470 - kedro.runner.sequential_runner - INFO - Completed 2 out of 2 tasks
+2023-11-07 00:33:47,471 - kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+2023-11-07 00:34:00,438 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 00:34:01,811 - kedro.io.data_catalog - INFO - Loading data from 'extra_data1' (CSVDataSet)...
+2023-11-07 00:34:01,833 - kedro.io.data_catalog - INFO - Loading data from 'events_preprocessed' (CSVDataSet)...
+2023-11-07 00:34:01,893 - kedro.io.data_catalog - INFO - Loading data from 'best_model' (PickleDataSet)...
+2023-11-07 00:34:01,907 - kedro.io.data_catalog - INFO - Loading data from 'scaler' (PickleDataSet)...
+2023-11-07 00:34:01,914 - kedro.pipeline.node - INFO - Running node: predict_new_node: predict_new_data([extra_data1,events_preprocessed,best_model,scaler]) -> [new_predictions]
+2023-11-07 00:34:02,012 - kedro.io.data_catalog - INFO - Saving data to 'new_predictions' (CSVDataSet)...
+2023-11-07 00:34:02,108 - kedro.runner.sequential_runner - INFO - Completed 1 out of 1 tasks
+2023-11-07 00:34:02,108 - kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+2023-11-07 00:36:45,885 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 00:36:47,256 - kedro.io.data_catalog - INFO - Loading data from 'extra_data1' (CSVDataSet)...
+2023-11-07 00:36:47,277 - kedro.io.data_catalog - INFO - Loading data from 'events_preprocessed' (CSVDataSet)...
+2023-11-07 00:36:47,343 - kedro.pipeline.node - INFO - Running node: predict_new_node: predict_new_data([extra_data1,events_preprocessed]) -> [new_predictions]
+2023-11-07 00:36:47,450 - kedro.io.data_catalog - INFO - Saving data to 'new_predictions' (CSVDataSet)...
+2023-11-07 00:36:47,544 - kedro.runner.sequential_runner - INFO - Completed 1 out of 1 tasks
+2023-11-07 00:36:47,545 - kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+2023-11-07 00:40:28,801 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 00:40:30,475 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-07 00:40:30,517 - kedro.io.data_catalog - INFO - Loading data from 'scaler' (PickleDataSet)...
+2023-11-07 00:40:30,522 - kedro.pipeline.node - INFO - Running node: save_model_node: save_model([train_data,scaler]) -> None
+2023-11-07 00:40:34,541 - kedro.runner.sequential_runner - INFO - Completed 1 out of 2 tasks
+2023-11-07 00:40:34,542 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-07 00:40:34,587 - kedro.pipeline.node - INFO - Running node: save_scaler_node: save_scaler([train_data]) -> None
+2023-11-07 00:40:34,594 - kedro.runner.sequential_runner - INFO - Completed 2 out of 2 tasks
+2023-11-07 00:40:34,595 - kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+2023-11-07 00:40:37,911 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 00:40:39,283 - kedro.io.data_catalog - INFO - Loading data from 'extra_data1' (CSVDataSet)...
+2023-11-07 00:40:39,307 - kedro.io.data_catalog - INFO - Loading data from 'events_preprocessed' (CSVDataSet)...
+2023-11-07 00:40:39,374 - kedro.pipeline.node - INFO - Running node: predict_new_node: predict_new_data([extra_data1,events_preprocessed]) -> [new_predictions]
+2023-11-07 00:40:39,395 - kedro.pipeline.node - ERROR - Node 'predict_new_node: predict_new_data([extra_data1,events_preprocessed]) -> [new_predictions]' failed with error: 
+'numpy.ndarray' object has no attribute 'transform'
+2023-11-07 00:40:39,402 - kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+2023-11-07 00:44:48,312 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 00:44:49,946 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-07 00:44:49,991 - kedro.io.data_catalog - INFO - Loading data from 'scaler' (PickleDataSet)...
+2023-11-07 00:44:49,997 - kedro.pipeline.node - INFO - Running node: save_model_node: save_model([train_data,scaler]) -> None
+2023-11-07 00:44:50,643 - kedro.pipeline.node - ERROR - Node 'save_model_node: save_model([train_data,scaler]) -> None' failed with error: 
+'numpy.ndarray' object has no attribute 'transform'
+2023-11-07 00:44:50,652 - kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+2023-11-07 00:45:19,825 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 00:45:21,191 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-07 00:45:21,231 - kedro.io.data_catalog - INFO - Loading data from 'scaler' (PickleDataSet)...
+2023-11-07 00:45:21,235 - kedro.pipeline.node - INFO - Running node: save_model_node: save_model([train_data,scaler]) -> None
+2023-11-07 00:45:22,032 - kedro.pipeline.node - ERROR - Node 'save_model_node: save_model([train_data,scaler]) -> None' failed with error: 
+'numpy.ndarray' object has no attribute 'transform'
+2023-11-07 00:45:22,041 - kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+2023-11-07 00:47:14,130 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 00:47:15,531 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-07 00:47:15,574 - kedro.pipeline.node - INFO - Running node: save_scaler_node: save_scaler([train_data]) -> [scaler]
+2023-11-07 00:47:15,579 - kedro.io.data_catalog - INFO - Saving data to 'scaler' (PickleDataSet)...
+2023-11-07 00:47:15,581 - kedro.runner.sequential_runner - INFO - Completed 1 out of 2 tasks
+2023-11-07 00:47:15,582 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-07 00:47:15,621 - kedro.io.data_catalog - INFO - Loading data from 'scaler' (PickleDataSet)...
+2023-11-07 00:47:15,624 - kedro.pipeline.node - INFO - Running node: save_model_node: save_model([train_data,scaler]) -> [best_model]
+2023-11-07 00:47:16,453 - kedro.pipeline.node - ERROR - Node 'save_model_node: save_model([train_data,scaler]) -> [best_model]' failed with error: 
+'numpy.ndarray' object has no attribute 'transform'
+2023-11-07 00:47:16,461 - kedro.runner.sequential_runner - WARNING - There are 1 nodes that have not run.
+You can resume the pipeline run from the nearest nodes with persisted inputs by adding the following argument to your previous command:
+  --from-nodes "save_model_node"
+2023-11-07 00:51:19,439 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 00:51:21,096 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-07 00:51:21,140 - kedro.pipeline.node - INFO - Running node: save_scaler_node: save_scaler([train_data]) -> [scaler]
+2023-11-07 00:51:21,147 - kedro.io.data_catalog - INFO - Saving data to 'scaler' (PickleDataSet)...
+2023-11-07 00:51:21,148 - kedro.runner.sequential_runner - INFO - Completed 1 out of 1 tasks
+2023-11-07 00:51:21,149 - kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+2023-11-07 00:57:09,055 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 00:57:11,056 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-07 00:57:11,104 - kedro.pipeline.node - INFO - Running node: save_model_node: save_model([train_data]) -> [best_model]
+2023-11-07 00:57:14,732 - kedro.io.data_catalog - INFO - Saving data to 'best_model' (PickleDataSet)...
+2023-11-07 00:57:14,743 - kedro.runner.sequential_runner - INFO - Completed 1 out of 1 tasks
+2023-11-07 00:57:14,743 - kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+2023-11-07 00:58:23,625 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 00:58:24,973 - kedro.io.data_catalog - INFO - Loading data from 'extra_data1' (CSVDataSet)...
+2023-11-07 00:58:24,997 - kedro.io.data_catalog - INFO - Loading data from 'events_preprocessed' (CSVDataSet)...
+2023-11-07 00:58:25,064 - kedro.pipeline.node - INFO - Running node: predict_new_node: predict_new_data([extra_data1,events_preprocessed]) -> [new_predictions]
+2023-11-07 00:58:25,181 - kedro.io.data_catalog - INFO - Saving data to 'new_predictions' (CSVDataSet)...
+2023-11-07 00:58:25,278 - kedro.runner.sequential_runner - INFO - Completed 1 out of 1 tasks
+2023-11-07 00:58:25,278 - kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+2023-11-07 01:01:30,894 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 01:01:32,298 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-07 01:01:32,343 - kedro.pipeline.node - INFO - Running node: save_model_node: save_model([train_data]) -> [best_model]
+2023-11-07 01:01:36,393 - kedro.io.data_catalog - INFO - Saving data to 'best_model' (PickleDataSet)...
+2023-11-07 01:01:36,402 - kedro.runner.sequential_runner - INFO - Completed 1 out of 2 tasks
+2023-11-07 01:01:36,403 - kedro.io.data_catalog - INFO - Loading data from 'events_preprocessed' (CSVDataSet)...
+2023-11-07 01:01:36,469 - kedro.pipeline.node - INFO - Running node: save_scaler_node: save_scaler([events_preprocessed]) -> [scaler]
+2023-11-07 01:01:36,489 - kedro.pipeline.node - ERROR - Node 'save_scaler_node: save_scaler([events_preprocessed]) -> [scaler]' failed with error: 
+could not convert string to float: '2012-04-10 19:23:30.000000'
+2023-11-07 01:01:36,493 - kedro.runner.sequential_runner - WARNING - There are 1 nodes that have not run.
+You can resume the pipeline run from the nearest nodes with persisted inputs by adding the following argument to your previous command:
+  --from-nodes "save_scaler_node"
+2023-11-07 01:02:04,759 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 01:02:06,116 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-07 01:02:06,159 - kedro.pipeline.node - INFO - Running node: save_model_node: save_model([train_data]) -> [best_model]
+2023-11-07 01:02:09,816 - kedro.io.data_catalog - INFO - Saving data to 'best_model' (PickleDataSet)...
+2023-11-07 01:02:09,827 - kedro.runner.sequential_runner - INFO - Completed 1 out of 2 tasks
+2023-11-07 01:02:09,827 - kedro.io.data_catalog - INFO - Loading data from 'events_preprocessed' (CSVDataSet)...
+2023-11-07 01:02:09,895 - kedro.pipeline.node - INFO - Running node: save_scaler_node: save_scaler([events_preprocessed]) -> [scaler]
+2023-11-07 01:02:09,896 - kedro.pipeline.node - ERROR - Node 'save_scaler_node: save_scaler([events_preprocessed]) -> [scaler]' failed with error: 
+name 'train_test_split' is not defined
+2023-11-07 01:02:09,900 - kedro.runner.sequential_runner - WARNING - There are 1 nodes that have not run.
+You can resume the pipeline run from the nearest nodes with persisted inputs by adding the following argument to your previous command:
+  --from-nodes "save_scaler_node"
+2023-11-07 01:02:47,804 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 01:02:49,164 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-07 01:02:49,207 - kedro.pipeline.node - INFO - Running node: save_model_node: save_model([train_data]) -> [best_model]
+2023-11-07 01:02:52,991 - kedro.io.data_catalog - INFO - Saving data to 'best_model' (PickleDataSet)...
+2023-11-07 01:02:53,005 - kedro.runner.sequential_runner - INFO - Completed 1 out of 2 tasks
+2023-11-07 01:02:53,005 - kedro.io.data_catalog - INFO - Loading data from 'events_preprocessed' (CSVDataSet)...
+2023-11-07 01:02:53,073 - kedro.pipeline.node - INFO - Running node: save_scaler_node: save_scaler([events_preprocessed]) -> [scaler]
+2023-11-07 01:02:53,084 - kedro.io.data_catalog - INFO - Saving data to 'scaler' (PickleDataSet)...
+2023-11-07 01:02:53,086 - kedro.runner.sequential_runner - INFO - Completed 2 out of 2 tasks
+2023-11-07 01:02:53,086 - kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+2023-11-07 01:02:59,521 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 01:03:00,896 - kedro.io.data_catalog - INFO - Loading data from 'extra_data1' (CSVDataSet)...
+2023-11-07 01:03:00,918 - kedro.io.data_catalog - INFO - Loading data from 'events_preprocessed' (CSVDataSet)...
+2023-11-07 01:03:00,986 - kedro.pipeline.node - INFO - Running node: predict_new_node: predict_new_data([extra_data1,events_preprocessed]) -> [new_predictions]
+2023-11-07 01:03:01,109 - kedro.io.data_catalog - INFO - Saving data to 'new_predictions' (CSVDataSet)...
+2023-11-07 01:03:01,203 - kedro.runner.sequential_runner - INFO - Completed 1 out of 1 tasks
+2023-11-07 01:03:01,203 - kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+2023-11-07 01:05:06,131 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 01:05:18,243 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 01:05:19,703 - kedro.io.data_catalog - INFO - Loading data from 'extra_data1' (CSVDataSet)...
+2023-11-07 01:05:19,726 - kedro.io.data_catalog - INFO - Loading data from 'events_preprocessed' (CSVDataSet)...
+2023-11-07 01:05:19,789 - kedro.io.data_catalog - INFO - Loading data from 'best_model' (PickleDataSet)...
+2023-11-07 01:05:19,804 - kedro.io.data_catalog - INFO - Loading data from 'scaler' (PickleDataSet)...
+2023-11-07 01:05:19,812 - kedro.pipeline.node - INFO - Running node: predict_new_node: predict_new_data([extra_data1,events_preprocessed,best_model,scaler]) -> [new_predictions]
+2023-11-07 01:05:19,919 - kedro.io.data_catalog - INFO - Saving data to 'new_predictions' (CSVDataSet)...
+2023-11-07 01:05:20,015 - kedro.runner.sequential_runner - INFO - Completed 1 out of 1 tasks
+2023-11-07 01:05:20,016 - kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+2023-11-07 20:30:00,048 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 20:30:03,748 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-07 20:30:03,794 - kedro.pipeline.node - INFO - Running node: save_model_node: save_model([train_data]) -> [best_model]
+2023-11-07 20:30:07,618 - kedro.io.data_catalog - INFO - Saving data to 'best_model' (PickleDataSet)...
+2023-11-07 20:30:07,628 - kedro.runner.sequential_runner - INFO - Completed 1 out of 3 tasks
+2023-11-07 20:30:07,629 - kedro.io.data_catalog - INFO - Loading data from 'events_preprocessed' (CSVDataSet)...
+2023-11-07 20:30:07,698 - kedro.pipeline.node - INFO - Running node: save_scaler_node: save_scaler([events_preprocessed]) -> [scaler]
+2023-11-07 20:30:07,710 - kedro.io.data_catalog - INFO - Saving data to 'scaler' (PickleDataSet)...
+2023-11-07 20:30:07,711 - kedro.runner.sequential_runner - INFO - Completed 2 out of 3 tasks
+2023-11-07 20:30:07,711 - kedro.io.data_catalog - INFO - Loading data from 'best_model' (PickleDataSet)...
+2023-11-07 20:30:07,724 - kedro.io.data_catalog - INFO - Loading data from 'test_data' (CSVDataSet)...
+2023-11-07 20:30:07,739 - kedro.pipeline.node - INFO - Running node: explain_model_node: explain_model([best_model,test_data]) -> None
+2023-11-07 20:30:07,753 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/xgboost/core.py:160: UserWarning: [20:30:07] WARNING: /Users/runner/work/xgboost/xgboost/src/c_api/c_api.cc:1240: Saving into deprecated binary model format, please consider using `json` or `ubj`. Model format will default to JSON in XGBoost 2.2 if not specified.
+
+2023-11-07 20:38:56,825 - dash.dash - INFO - Dash is running on http://0.0.0.0:8050/
+
+2023-11-07 20:52:09,632 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 20:52:12,383 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-07 20:52:12,430 - kedro.pipeline.node - INFO - Running node: save_model_node: save_model([train_data]) -> [best_model]
+2023-11-07 20:52:16,158 - kedro.io.data_catalog - INFO - Saving data to 'best_model' (PickleDataSet)...
+2023-11-07 20:52:16,168 - kedro.runner.sequential_runner - INFO - Completed 1 out of 3 tasks
+2023-11-07 20:52:16,169 - kedro.io.data_catalog - INFO - Loading data from 'events_preprocessed' (CSVDataSet)...
+2023-11-07 20:52:16,238 - kedro.pipeline.node - INFO - Running node: save_scaler_node: save_scaler([events_preprocessed]) -> [scaler]
+2023-11-07 20:52:16,250 - kedro.io.data_catalog - INFO - Saving data to 'scaler' (PickleDataSet)...
+2023-11-07 20:52:16,252 - kedro.runner.sequential_runner - INFO - Completed 2 out of 3 tasks
+2023-11-07 20:52:16,252 - kedro.io.data_catalog - INFO - Loading data from 'best_model' (PickleDataSet)...
+2023-11-07 20:52:16,264 - kedro.io.data_catalog - INFO - Loading data from 'test_data' (CSVDataSet)...
+2023-11-07 20:52:16,281 - kedro.pipeline.node - INFO - Running node: explain_model_node: explain_model([best_model,test_data]) -> None
+2023-11-07 20:52:16,294 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/xgboost/core.py:160: UserWarning: [20:52:16] WARNING: /Users/runner/work/xgboost/xgboost/src/c_api/c_api.cc:1240: Saving into deprecated binary model format, please consider using `json` or `ubj`. Model format will default to JSON in XGBoost 2.2 if not specified.
+
+2023-11-07 21:01:17,114 - dash.dash - INFO - Dash is running on http://0.0.0.0:8050/
+
+2023-11-07 21:06:51,874 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 21:06:55,614 - kedro.io.data_catalog - INFO - Loading data from 'extra_data1' (CSVDataSet)...
+2023-11-07 21:06:55,638 - kedro.io.data_catalog - INFO - Loading data from 'extra_data2' (CSVDataSet)...
+2023-11-07 21:06:55,667 - kedro.pipeline.node - INFO - Running node: detect_drift_node: detect_drift([extra_data1,extra_data2]) -> None
+2023-11-07 21:06:55,961 - kedro.pipeline.node - ERROR - Node 'detect_drift_node: detect_drift([extra_data1,extra_data2]) -> None' failed with error: 
+An empty column 'T-JUS-CKGL' was provided for drift calculation in the reference dataset.
+2023-11-07 21:06:55,968 - kedro.runner.sequential_runner - WARNING - No nodes ran. Repeat the previous command to attempt a new run.
+2023-11-07 21:09:11,259 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 21:09:14,465 - kedro.io.data_catalog - INFO - Loading data from 'extra_data1' (CSVDataSet)...
+2023-11-07 21:09:14,488 - kedro.io.data_catalog - INFO - Loading data from 'extra_data2' (CSVDataSet)...
+2023-11-07 21:09:14,517 - kedro.pipeline.node - INFO - Running node: detect_drift_node: detect_drift([extra_data1,extra_data2]) -> None
+2023-11-07 21:09:30,671 - kedro.runner.sequential_runner - INFO - Completed 1 out of 1 tasks
+2023-11-07 21:09:30,672 - kedro.runner.sequential_runner - INFO - Pipeline execution completed successfully.
+2023-11-07 22:23:34,021 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 22:23:37,134 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-07 22:23:37,209 - kedro.pipeline.node - INFO - Running node: auto_eda_node: auto_eda([events]) -> None
+2023-11-07 22:51:29,817 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-07 22:51:33,036 - kedro.io.data_catalog - INFO - Loading data from 'train_data' (CSVDataSet)...
+2023-11-07 22:51:33,084 - kedro.pipeline.node - INFO - Running node: save_model_node: save_model([train_data]) -> [best_model]
+2023-11-07 22:51:37,266 - kedro.io.data_catalog - INFO - Saving data to 'best_model' (PickleDataSet)...
+2023-11-07 22:51:37,278 - kedro.runner.sequential_runner - INFO - Completed 1 out of 3 tasks
+2023-11-07 22:51:37,278 - kedro.io.data_catalog - INFO - Loading data from 'events_preprocessed' (CSVDataSet)...
+2023-11-07 22:51:37,347 - kedro.pipeline.node - INFO - Running node: save_scaler_node: save_scaler([events_preprocessed]) -> [scaler]
+2023-11-07 22:51:37,358 - kedro.io.data_catalog - INFO - Saving data to 'scaler' (PickleDataSet)...
+2023-11-07 22:51:37,361 - kedro.runner.sequential_runner - INFO - Completed 2 out of 3 tasks
+2023-11-07 22:51:37,361 - kedro.io.data_catalog - INFO - Loading data from 'best_model' (PickleDataSet)...
+2023-11-07 22:51:37,375 - kedro.io.data_catalog - INFO - Loading data from 'test_data' (CSVDataSet)...
+2023-11-07 22:51:37,391 - kedro.pipeline.node - INFO - Running node: explain_model_node: explain_model([best_model,test_data]) -> None
+2023-11-07 22:51:37,404 - py.warnings - WARNING - /Users/gianatmaja/anaconda3/lib/python3.11/site-packages/xgboost/core.py:160: UserWarning: [22:51:37] WARNING: /Users/runner/work/xgboost/xgboost/src/c_api/c_api.cc:1240: Saving into deprecated binary model format, please consider using `json` or `ubj`. Model format will default to JSON in XGBoost 2.2 if not specified.
+
+2023-11-07 23:10:08,878 - dash.dash - INFO - Dash is running on http://0.0.0.0:8050/
+
+2023-11-08 10:09:20,740 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-08 10:09:23,516 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-08 10:09:23,590 - kedro.pipeline.node - INFO - Running node: auto_eda_node: auto_eda([events]) -> None
+2023-11-08 13:47:36,257 - kedro.framework.session.session - INFO - Kedro project efds-poc
+2023-11-08 13:47:39,691 - kedro.io.data_catalog - INFO - Loading data from 'events' (CSVDataSet)...
+2023-11-08 13:47:39,766 - kedro.pipeline.node - INFO - Running node: auto_eda_node: auto_eda([events]) -> None
