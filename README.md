@@ -9,8 +9,12 @@ With unplanned downtime being a leading contributor of high costs for them, it m
 ## Proposed Solution
 An early fault detection system to identify faulty transient state (the state between normal and permament faulty) in oil wells is recommended. By identifying faulty transient states, maintenance can be done quickly and as needed, thus reducing unplanned downtime and the costs associated with it.
 
+![dashboard](images/dashboard.png)
+
 ## Business Impact
 The value driver tree below illustrate the business impact of the proposed early fault detection system. On the left, the business impact - cost reduction - is defined. Moving to the right of the tree are the drivers. This provides an illustration of how reductions in costs can be achieved through reduction of unplanned downtime and identification of transient faulty states, further driven by the performance of ML models, as well as reporting and response time following the detection of faulty transient states.
+
+![dashboard](images/vdt.png)
 
 ## Proof-of-Concept (PoC)
 This GitHub repository serves as the PoC and will demonstrate the feasibility of the proposed early fault detection system.
@@ -73,9 +77,15 @@ The main codes for the project are in `src` directory inside the `efds-poc` fold
 
 In the `data_preprocessing` pipeline, auto-eda is performed using the D-Tale library. Then, some preprocessing on the data is done to prepare it for ML modelling.
 
+![dashboard](images/dtale.png)
+
 Next, different models are experimented on the dataset, and their performances are tracked using Weights & Biases' tracking feature in the `model_experimentation` pipeline.
 
+![dashboard](images/Wandb.png)
+
 Upon obtaining the model that produces the best performance (in this case, highest accuracy), it is saved in `model_saving` for future inference, which will performed be the `model_inference` pipeline. To promote model explainability, an dashboard is also created as part of the process, using the explainer-dashboard library.
+
+![dashboard](images/modelexplainer.png)
 
 ### Visualizing the Workflow
 The pipeline can also be visualized using the `Kedro-Viz` library, by running to following command:
@@ -85,6 +95,8 @@ kedro viz
 ```
 
 The result can be seen below.
+
+![dashboard](images/kedro-pipeline.png)
 
 ## References
 [1] Casey, J. (2020, November 30). The Oil and Gas Energy Transition: Is Cutting Costs Enough? Offshore Technology. https://www.offshore-technology.com/features/the-oil-and-gas-energy-transition-is-cutting-costs-enough/
