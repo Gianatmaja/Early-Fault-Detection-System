@@ -22,9 +22,9 @@ The dataset used for the PoC is a sample obtained from the [3W Dataset GitHub Re
 
 ### Tech Stack
 The highlighted tools and libraries used to develop this PoC are:
-- Kedro
-- D-Tale
-- Scikit-Learn
-- Weights & Biases
-- Explainer-Dashboard
+- [Kedro](https://docs.kedro.org/en/stable/): Used for code management and to promote reusability and readability.
+- [D-Tale](https://pypi.org/project/dtale/): Used for automating the EDA process.
+- [Scikit-Learn](https://scikit-learn.org/stable/): Used for ML model training.
+- [Weights & Biases](https://docs.wandb.ai/): Used for experiment tracking and ML model management.
+- [Explainer-Dashboard](https://explainerdashboard.readthedocs.io/en/latest/): Used for model explainabillity.
 
