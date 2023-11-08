@@ -18,17 +18,21 @@ This GitHub repository serves as the PoC and will demonstrate the feasibility of
 ### Running the PoC
 The main codes for the PoC follows the Kedro project structure. To execute the entire project, go to the efds-poc directory and run the following command.
 
-  kedro run
+```bash
+kedro run
+```
 
 To run a specific pipeline, run the following command.
 
 ```bash
-> kedro run --pipeline=<replace with pipeline name>
+kedro run --pipeline=<replace with pipeline name>
 ```
 
 To run a specific node, run the following command.
 
-  kedro run --node=<replace with node name>
+```bash
+kedro run --node=<replace with node name>
+```
 
 For more information on the Kedro project structure, refer to the [Kedro documentation](https://docs.kedro.org/en/stable/).
 
