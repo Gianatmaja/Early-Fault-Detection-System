@@ -75,7 +75,7 @@ In the `data_preprocessing` pipeline, auto-eda is performed using the D-Tale lib
 
 Next, different models are experimented on the dataset, and their performances are tracked using Weights & Biases' tracking feature in the `model_experimentation` pipeline.
 
-Upon obtaining the model that produces the best performance (in this case, highest accuracy), it is saved in `model_saving` for future inference, which will performed be the `model_inference` pipeline.
+Upon obtaining the model that produces the best performance (in this case, highest accuracy), it is saved in `model_saving` for future inference, which will performed be the `model_inference` pipeline. To promote model explainability, an dashboard is also created as part of the process, using the explainer-dashboard library.
 
 ### Visualizing the Workflow
 The pipeline can also be visualized using the `Kedro-Viz` library, by running to following command:
