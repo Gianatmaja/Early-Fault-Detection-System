@@ -22,7 +22,7 @@ The main codes for the PoC follows the Kedro project structure. To execute the e
 
 To run a specific pipeline, run the following command.
 
-  kedro run --pipeline=<replace with pipeline name>
+  kedro run --pipeline=`replace with pipeline name`
 
 To run a specific node, run the following command.
 
