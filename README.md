@@ -71,6 +71,12 @@ The main codes for the project are in `src` directory inside the `efds-poc` fold
 - model_saving
 - model_inference
 
+In the `data_preprocessing` pipeline, auto-eda is performed using the D-Tale library. Then, some preprocessing on the data is done to prepare it for ML modelling.
+
+Next, different models are experimented on the dataset, and their performances are tracked using Weights & Biases' tracking feature in the `model_experimentation` pipeline.
+
+Upon obtaining the model that produces the best performance (in this case, highest accuracy), it is saved in `model_saving` for future inference, which will performed be the `model_inference` pipeline.
+
 ### Visualizing the Workflow
 The pipeline can also be visualized using the `Kedro-Viz` library, by running to following command:
 
