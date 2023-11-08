@@ -77,7 +77,7 @@ The main codes for the project are in `src` directory inside the `efds-poc` fold
 
 In the `data_preprocessing` pipeline, auto-eda is performed using the D-Tale library. Then, some preprocessing on the data is done to prepare it for ML modelling.
 
-![dashboard](images/dtale.png)
+![dashboard](images/Dtale.png)
 
 Next, different models are experimented on the dataset, and their performances are tracked using Weights & Biases' tracking feature in the `model_experimentation` pipeline.
 
