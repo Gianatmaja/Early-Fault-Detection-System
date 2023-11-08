@@ -82,6 +82,7 @@ The result can be seen below.
 
 ## References
 [1] Casey, J. (2020, November 30). The Oil and Gas Energy Transition: Is Cutting Costs Enough? Offshore Technology. https://www.offshore-technology.com/features/the-oil-and-gas-energy-transition-is-cutting-costs-enough/
+
 [2] The Real Cost of Downtime in Process Manufacturing (2022, January 5). Precognize, A Samson Company. https://www.precog.co/blog/downtime-cost-process-manufacturing/
+
 [3] Vargas, Ricardo; Munaro, Celso; Ciarelli, Patrick; Medeiros, André; Amaral, Bruno; Barrionuevo, Daniel; Araújo, Jean; Ribeiro, Jorge; Magalhães, Lucas (2019), “Data for: A Realistic and Public Dataset with Rare Undesirable Real Events in Oil Wells”, Mendeley Data, v1. http://dx.doi.org/10.17632/r7774rwc7v.1
-![image](https://github.com/Gianatmaja/Early-Fault-Detection-System/assets/65583121/0b72a66a-6b5f-429c-9cd2-db735251ea62)
