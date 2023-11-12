@@ -9,6 +9,8 @@ With unplanned downtime being a leading contributor of high costs for them, it m
 ## Proposed Solution
 An early fault detection system to identify faulty transient state (the state between normal and permament faulty) in oil wells is recommended. By identifying faulty transient states, maintenance can be done quickly and as needed, thus reducing unplanned downtime and the costs associated with it.
 
+Below is an illustrative diagram of the early fault detection system.
+
 ![dashboard](images/EFDS.png)
 
 ## Business Impact
